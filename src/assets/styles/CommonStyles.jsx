@@ -1,0 +1,1 @@
+export const serviceTextField = "bg-white fs-3 rounded-3 border-2 mt-1 py-2 px-3 mb-1 mt-1"

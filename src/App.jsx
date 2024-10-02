@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState,Suspense } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import BackgroundLayout from './components/commonComponents/BackgroundLayout'
+import { Route, Routes, useLocation} from 'react-router-dom';
 import Home from './components/serviceComponents/ipoRequests/home'
+import { serviceRouteList } from './routes/routeList';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
 
-      <div>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -30,8 +31,20 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more ha ha 
-      </p>
-      <Home/>
+      </p> */}
+      <Routes>
+        {serviceRouteList.map((route,index)=>{
+          console.log(route);
+          return(
+            <Route key={index} path={route.url} element={
+              <Suspense>
+                 <route.component/>
+              </Suspense>
+              }/>
+          )
+        })}
+      </Routes>
+      {/* <Home/> */}
       
       </>
   )
