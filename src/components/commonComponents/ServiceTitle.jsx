@@ -18,7 +18,7 @@ function ServiceTitle({label}) {
         <text
         style={{
             fontFamily: "k2d-bold",
-            fontSize: 24,
+            fontSize: 20,
             textAlign: "center",
 
         }}

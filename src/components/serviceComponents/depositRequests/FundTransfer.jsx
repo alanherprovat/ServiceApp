@@ -5,7 +5,7 @@ import Selector from '../../commonComponents/Selector'
 import DocumentPicker from '../../commonComponents/DocumentPicker'
 import ServiceTitle from '../../commonComponents/ServiceTitle'
 import SubmitButton from '../../commonComponents/SubmitButton'
-function CashDeposit() {
+function FundTransfer() {
   const bankList=[
     {
       "bankID":123,
@@ -23,12 +23,12 @@ function CashDeposit() {
   const [document,setDocument] = useState(null)
   return (
     <div
-    className="container-fluid d-flex flex-column justify-content-between vh-100 w-100 mx-auto mt-4" // Bootstrap classes for centering and margin // Custom width style
+    className="container-fluid d-flex flex-column mt-4 vh-100 justify-content-between" // Bootstrap classes for centering and margin // Custom width style
   >
-   
     
-    <div className="d-flex flex-column px-5 position-relative" style={{ flexGrow: 0.5 }}>
-    <ServiceTitle label="Cash Deposit"/>
+
+    <div className="d-flex flex-column px-5" style={{ flexGrow: 0.5 }}>
+    <ServiceTitle label="Fund Transfer"/>
     <label className={`${formLabel} mt-2`} style={{fontFamily:"K2d-Bold"}}>Document</label>
     <DocumentPicker document={document} setDocument={setDocument} label="Attach Bank Document"/>
       <label className={`${formLabel}`} style={{fontFamily:"K2d-Bold"}}>Amount</label>
@@ -36,7 +36,6 @@ function CashDeposit() {
      value=""
      onChange={()=>{}}
      className={serviceTextField}
-     style={{borderColor:"#526D82"}}
      />
      {/* <input
      className={serviceTextField}
@@ -44,9 +43,9 @@ function CashDeposit() {
      <Selector
      label="Select Deposit Bank"
      dropDownItems={bankList}
-     className={`${serviceTextField} py-2`}
+     className={`${serviceTextField} py-2 px-2`}
      />
-    
+
      </div>
      <div
      className='flex-column px-5 my-2'
@@ -57,9 +56,8 @@ function CashDeposit() {
      >
      <SubmitButton label="Submit"/>
      </div>
-    
     </div>
   )
 }
 
-export default CashDeposit
+export default FundTransfer

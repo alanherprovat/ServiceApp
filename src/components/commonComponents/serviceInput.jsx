@@ -25,7 +25,7 @@ const ServiceInput = (props) => {
 
   return (
     <div className={props.className}>
-      <InputGroup className={`${className} ${focusStyle ? 'border-primary' : 'border-muted'}`}>
+      <InputGroup className={`${className}`}>
         {leftIcon && (
           <Button variant="outline-secondary" onClick={leftIconPress}>
             <i className={`bi bi-${leftIcon}`}></i> {/* Bootstrap Icons */}
@@ -38,8 +38,8 @@ const ServiceInput = (props) => {
           onChange={(e) => onChange(e.target.value)}
           className={className} 
           ref={inputRef}
-          onFocus={() => setFocusStyle(true)}
-          onBlur={() => setFocusStyle(false)}
+          // onFocus={() => setFocusStyle(true)}
+          // onBlur={() => setFocusStyle(false)}
           disabled={!editable}
         />
 

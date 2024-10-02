@@ -23,7 +23,7 @@ function DocumentPicker({ document,setDocument,label }) {
         borderColor: "#C2AEAE",
         borderWidth: 2,
         borderRadius: 8,
-        padding: 16,
+        padding: 4,
         borderStyle: "dashed",
       }}
     >

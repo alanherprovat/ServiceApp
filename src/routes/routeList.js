@@ -9,6 +9,10 @@ export const serviceRouteList = [
         url: '/cashDeposit',
         component: lazy(() => import('../components/serviceComponents/depositRequests/CashDeposit')),
     },
+    {
+        url: '/fundTransfer',
+        component: lazy(() => import('../components/serviceComponents/depositRequests/FundTransfer'))
+    }
     
 ];
 // export const unAuthorizedRoutes = [
