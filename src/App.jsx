@@ -2,7 +2,12 @@ import { useState,Suspense } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+<<<<<<< Updated upstream
 import { Route, Routes, useLocation} from 'react-router-dom';
+=======
+import "bootstrap/dist/css/bootstrap.min.css";
+import BackgroundLayout from './components/commonComponents/BackgroundLayout'
+>>>>>>> Stashed changes
 import Home from './components/serviceComponents/ipoRequests/home'
 import { serviceRouteList } from './routes/routeList';
 
