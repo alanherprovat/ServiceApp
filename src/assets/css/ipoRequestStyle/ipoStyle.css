@@ -1,0 +1,21 @@
+ .label-text {
+    color: #152035B2;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    letter-spacing: 0.02em;
+   
+  }
+  
+  .value-text {
+    color: #000000B2;
+    margin-top: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    letter-spacing: 0.02em;
+   
+  }
+   
