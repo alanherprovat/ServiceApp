@@ -6,6 +6,7 @@ export default function home() {
     <>
       <div>home page IPO</div>
       <div>ClientFinancialInfo</div>
+      <ClientFinancialInfo/>
     </>
   
   )

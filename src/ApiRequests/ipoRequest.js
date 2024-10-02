@@ -1,6 +1,5 @@
 import axios from "axios";
-// import { BaseURL } from "/config/config.js";
-import axiosInstance from "/config/axioInstance.js";
+import axiosInstance from "../../config/axioInstance";
 
 export async function IpoClientFinancialInfo() {
     try {

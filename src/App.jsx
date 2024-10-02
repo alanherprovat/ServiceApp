@@ -32,7 +32,7 @@ function App() {
         Click on the Vite and React logos to learn more ha ha 
       </p>
       <Home/>
-
+      
       </>
   )
 }
