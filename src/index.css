@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 @font-face {
   font-family: 'K2d-Regular';
   src: url('./assets/font/K2D-Regular.ttf') format('truetype'); /* Change to 'truetype' */
+=======
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+>>>>>>> Stashed changes
   font-weight: 400;
   font-style: normal;
 }
@@ -70,6 +76,7 @@ outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
+<<<<<<< Updated upstream
 :root {
   color: #213547;
   background-color: #ffffff;
@@ -81,3 +88,16 @@ button {
   background-color: #f9f9f9;
 }
 }
+=======
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+>>>>>>> Stashed changes
