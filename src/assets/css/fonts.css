@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'K2d-Regular';
+    src: url('../font/K2D-Regular.ttf') format('ttf'),
+         url('../font/K2D-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'K2d-Bol';
+    src: url('../font/K2D-Bold.ttf') format('ttf'),
+         url('../font/K2D-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
