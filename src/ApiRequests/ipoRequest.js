@@ -1,10 +1,8 @@
 import axios from "axios";
-import { BaseURL } from "../config/config";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import axiosInstance from "../config/axioInstance";
+import { BaseURL } from "../../public/config/config";
+import axiosInstance from "../../public/config/axioInstance";
 
 export async function IpoClientFinancialInfo() {
-    const token = await AsyncStorage.getItem("UserToken");
     try {
       const response = await axiosInstance.get("/ipoClientInfo");
     //   console.log("res",response.data)
