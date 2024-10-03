@@ -2,6 +2,7 @@ import React,{useState,useEffect,useFonts} from 'react'
 import ClientFinancialInfo from './clientFinancialInfo'
 import IpoList from './ipoList';
 import AppliedIPO from './appliedIPO';
+import { IpoRequest } from '../../../ApiRequests/ipoRequest';
 import CustomCheckbox from '../../commonComponents/CustomCheckbox'
 import '../../../assets/css/commonStyle/checkBox.css';
 import '../../../assets/css/ipoRequestStyle/ipoStyle.css';
@@ -77,7 +78,7 @@ const onSubmit = async()=>{
     ipoInstrumentID: item?.IPOInstrumentID,
     applicationAmount: item?.MinApplicationAmount,
   }));
-  console.log(ipoRequest)
+  console.log("ipoRequests",ipoRequest)
   try {
     let response = await IpoRequest(ipoRequest)
     console.log('response in front',response)
@@ -133,7 +134,7 @@ const onSubmit = async()=>{
       justifyContent:"center",
      }}
      >
-     <SubmitButton label="Submit"/>
+     <SubmitButton label="Submit" onSubmit={onSubmit}/>
      </div>
 
     </>

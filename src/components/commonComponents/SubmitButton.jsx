@@ -1,21 +1,19 @@
 import React from 'react'
 
-function SubmitButton({label}) {
+function SubmitButton({label,onSubmit}) {
   return (
     <>
     <button
     className='d-flex border-1 rounded-2 border-danger p-2 my-4 justify-content-center bg-white'
     style={{
-        fontFamily:"K2d-Bold"
+        fontFamily:"K2d-Bold",
+        textAlign:"center"
     }}
+    onClick={()=>{onSubmit()}}
     >
-        <text
-        style={{
-            textAlign:"center"
-        }}
-        >
+
         {label}
-        </text>
+    
     
     </button>
     
