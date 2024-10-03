@@ -23,7 +23,6 @@ const ServiceInput = (props) => {
     //   inputRef.current.focus();
     // }
   }, [props.id]);
-
   return (
     <div className={props.className}>
       <InputGroup className={`${className}`} style={props.style}>

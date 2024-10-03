@@ -37,9 +37,10 @@ function MFS() {
         </label>
         <ServiceInput
           value=""
+          placeholder="Deposit Amount"
           onChange={() => {}}
           className={serviceTextField}
-          style={{ borderColor: "#526D82" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
         />
         <Selector
           label="Select Deposit wallet"
@@ -69,9 +70,10 @@ function MFS() {
         </label>
         <ServiceInput
           value=""
+          placeholder="Mobile Number"
           onChange={() => {}}
           className={serviceTextField}
-          style={{ borderColor: "#526D82" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
         />
       </div>
       <div

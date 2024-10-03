@@ -34,9 +34,10 @@ function CashDeposit() {
       <label className={`${formLabel}`} style={{fontFamily:"K2d-Bold"}}>Amount</label>
      <ServiceInput
      value=""
+     placeholder="Enter Deposit Amount"
      onChange={()=>{}}
      className={serviceTextField}
-     style={{borderColor:"#526D82"}}
+     style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
      />
      {/* <input
      className={serviceTextField}
