@@ -1,9 +1,11 @@
  .label-text {
+    margin: 0;
     color: #152035B2;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 600;
-    line-height: 14.52px;
+    /* line-height: 14.52px; */
+    line-height: 1.5;
     letter-spacing: 0.02em;
    
   }
@@ -14,7 +16,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 600;
-    line-height: 14.52px;
+    /* line-height: 14.52px; */
+    line-height: 1.5;
     letter-spacing: 0.02em;
    
   }

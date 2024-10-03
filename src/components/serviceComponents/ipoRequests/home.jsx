@@ -1,9 +1,11 @@
 import React,{useState,useEffect,useFonts} from 'react'
 import ClientFinancialInfo from './clientFinancialInfo'
 import IpoList from './ipoList';
+import AppliedIPO from './appliedIPO';
 import CustomCheckbox from '../../commonComponents/CustomCheckbox'
 import '../../../assets/css/commonStyle/checkBox.css';
 import '../../../assets/css/ipoRequestStyle/ipoStyle.css';
+import IpoAppFormSvg from '../../../assets/images/ipoAppFormSvg';
 
 export default function home() {
 
@@ -86,14 +88,7 @@ const onSubmit = async()=>{
 
   return (
     <>
-      <div>home page IPO</div>
-      <div>ClientFinancialInfo</div>
-      <ClientFinancialInfo/>
-    
-    <div className="application-form-header">
-      <h5 className="application-Header-label-text">Application Form</h5>
-    </div>
-
+    <ClientFinancialInfo/>
     <IpoList
       selectedItems={selectedItems} 
       multipleSelect={multipleSelect} 
@@ -109,6 +104,25 @@ const onSubmit = async()=>{
         containerStyle='checkbox-container'
         textStyle='checkbox-textStyle'
       />
+
+    <div className="application-form-header">
+      <h5 className="application-Header-label-text">Application Form</h5>
+    </div>
+
+    {itemArray?.length === 0 && (
+      <div className="ipo-container d-flex flex-column justify-content-center align-items-center mx-3 mt-3 py-2">
+        <IpoAppFormSvg /> 
+        <div className="d-flex flex-column justify-content-center align-items-center mx-3 mt-3 py-2">
+          <p>Currently No IPO has been Selected.</p>
+          <p className="mt-2">Select IPO to get form!</p>
+        </div>
+      </div>
+    )}
+     
+     { itemArray?.length > 0 && 
+    (
+     <AppliedIPO itemArray={itemArray} />
+    )}
         
     </>
   

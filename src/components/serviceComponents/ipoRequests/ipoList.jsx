@@ -28,7 +28,7 @@ export default function IpoList({ selectedItems, multipleSelect, handleSelect, s
                 {ipoClientFinancialInfo?.IPOEligableClientList.map((item, index) => (
                     <div key={index} className="ipo-list-row">
                         
-                        <div className="col-4 instrument-container">
+                        <div className="col-5 instrument-container">
                             <div className="d-flex align-items-center main-row-content">
                                 <span className="security-label">{item?.SecurityCode}</span>
                                 {multipleSelect && (
@@ -60,7 +60,7 @@ export default function IpoList({ selectedItems, multipleSelect, handleSelect, s
                         </div>
 
 
-                        <div className="col-4 button-container">
+                        <div className="col-3 button-container">
                             <button
                                 className={`apply-button ${multipleSelect ? 'disabled-button' : ''}`}
                                 onClick={() => {

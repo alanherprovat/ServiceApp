@@ -71,11 +71,11 @@
   .date-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Align content to the right */
     flex-direction: column;
     height: inherit;
-  }
-  
+}
+
   .subs-date-label {
     font-weight: 400; /* Regular weight */
     font-family: 'k2d-regular', sans-serif; /* Ensure the font is loaded */
