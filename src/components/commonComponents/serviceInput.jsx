@@ -10,7 +10,8 @@ const ServiceInput = (props) => {
     rightIconPress = () => {},
     className = '',
     value = '',
-    onChange = () => {}
+    onChange = () => {},
+    style
   } = props;
 
   const [focusStyle, setFocusStyle] = useState(false);
@@ -25,7 +26,7 @@ const ServiceInput = (props) => {
 
   return (
     <div className={props.className}>
-      <InputGroup className={`${className}`}>
+      <InputGroup className={`${className}`} style={props.style}>
         {leftIcon && (
           <Button variant="outline-secondary" onClick={leftIconPress}>
             <i className={`bi bi-${leftIcon}`}></i> {/* Bootstrap Icons */}
