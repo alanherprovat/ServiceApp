@@ -12,6 +12,10 @@ export const serviceRouteList = [
     {
         url: '/fundTransfer',
         component: lazy(() => import('../components/serviceComponents/depositRequests/FundTransfer'))
+    },
+    {
+        url: '/MFS',
+        component: lazy(() => import('../components/serviceComponents/depositRequests/MFS'))
     }
     
 ];

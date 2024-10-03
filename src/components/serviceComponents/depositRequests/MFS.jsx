@@ -6,9 +6,10 @@ import DocumentPicker from '../../commonComponents/DocumentPicker'
 import ServiceTitle from '../../commonComponents/ServiceTitle'
 import SubmitButton from '../../commonComponents/SubmitButton'
 import { allBankList, depositBankList } from '../../../Data/AllBankList'
-function FundTransfer() {
-  
-  const [document,setDocument] = useState(null)
+import { walletList } from '../../../Data/walletList'
+
+function MFS() {
+    const [document,setDocument] = useState(null)
   return (
     <div
     className="container-fluid d-flex flex-column mt-4 vh-100 w-100" // Bootstrap classes for centering and margin // Custom width style
@@ -16,9 +17,9 @@ function FundTransfer() {
     
 
     <div className="d-flex flex-column px-5" style={{ flexGrow: 0.5 }}>
-    <ServiceTitle label="Fund Transfer"/>
+    <ServiceTitle label="MFS"/>
     <label className={`${formLabel} mt-2`} style={{fontFamily:"K2d-Bold"}}>Document</label>
-    <DocumentPicker document={document} setDocument={setDocument} label="Attach Bank Document"/>
+    <DocumentPicker document={document} setDocument={setDocument} label="Attach Deposit Document"/>
       <label className={`${formLabel}`} style={{fontFamily:"K2d-Bold"}}>Amount</label>
       <ServiceInput
      value=""
@@ -27,26 +28,18 @@ function FundTransfer() {
      style={{borderColor:"#526D82"}}
      />
      <Selector
-     label="Select Deposit Bank"
-     placeholder="Deposit Bank List"
-     dropDownItems={depositBankList}
-     className={`${serviceTextField} py-2 px-2`}
-     valueKey="bankID"
-     nameKey="bankName"
-     />
-     <Selector
-     label="Client Bank"
-     placeholder="All Bank List"
-     dropDownItems={allBankList}
+     label="Select Deposit wallet"
+     placeholder="Deposit Wallet "
+     dropDownItems={walletList}
      className={`${serviceTextField} py-2 px-2`}
      />
      <Selector
-     label="Client Branch"
-     placeholder="Branch List"
-     dropDownItems={[]}
+     label="Select Client Wallet"
+     placeholder="Client Wallet"
+     dropDownItems={walletList}
      className={`${serviceTextField} py-2 px-2`}
      />
-     <label className={`${formLabel} mt-2`} style={{fontFamily:"K2d-Bold"}}>Routing</label>
+     <label className={`${formLabel} mt-2`} style={{fontFamily:"K2d-Bold"}}>Wallet No.</label>
      <ServiceInput
      value=""
      onChange={()=>{}}
@@ -67,4 +60,4 @@ function FundTransfer() {
   )
 }
 
-export default FundTransfer
+export default MFS
