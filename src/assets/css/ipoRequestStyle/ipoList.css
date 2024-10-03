@@ -55,9 +55,7 @@
     /* min-width: 0;  */
   }
   
-  .custom-checkbox {
-    margin-left: 8px; /* Adds spacing between label and checkbox */
-  }
+
   
   .instrument-name {
     font-family: 'Inter', sans-serif; /* Ensure the font is imported */
@@ -98,10 +96,13 @@
   
   
   
-  .custom-checkbox {
+  /* .custom-checkbox {
     margin-left: 10px;
-  }
+  } */
   
+  /* .custom-checkbox {
+    margin-left: 8px; 
+  } */
 
 
   .subscription-label {

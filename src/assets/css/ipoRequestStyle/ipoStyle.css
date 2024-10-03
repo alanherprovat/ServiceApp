@@ -1,21 +1,20 @@
- .label-text {
-    margin: 0;
+ .label-text-client-FinData {
     color: #152035B2;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 600;
     /* line-height: 14.52px; */
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    /* letter-spacing: 0.02em; */
    
   }
   
-  .value-text {
+  .value-text-client-FinData {
     color: #000000B2;
     margin-top: 5px;
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     /* line-height: 14.52px; */
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -35,7 +34,7 @@
   
   .application-Header-label-text {
     font-family: 'Inter', sans-serif; /* Ensure the font family is correct */
-    font-size: 12px; /* Font size */
+    font-size: 14px; /* Font size */
     font-weight: 600; /* Font weight */
     color: #000; /* Text color */
   }

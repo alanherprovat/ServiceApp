@@ -32,22 +32,15 @@ export default function IpoList({ selectedItems, multipleSelect, handleSelect, s
                             <div className="d-flex align-items-center main-row-content">
                                 <span className="security-label">{item?.SecurityCode}</span>
                                 {multipleSelect && (
-                                    <CustomCheckbox                                       
+                                    <div className="ms-1">
+                                        <CustomCheckbox                                       
                                         checked={selectedItems[index] || false}
                                         onPress={() => handleSelect(index, item)}
                                         onboarding={false}
                                         containerStyle='checkbox-container'
                                         // textStyle='checkbox-textStyle'
                                     />
-
-
-                                    // <input
-                                    //     type="checkbox"
-                                    //     checked={selectedItems[index] || false}
-                                    //     onChange={() => handleSelect(index, item)}
-                                    //     className="form-check-input custom-checkbox ms-2"
-                                    // />
-
+                                    </div>
                                 )}
                             </div>
                             <span className="instrument-name">({item?.InstrumentName})</span>

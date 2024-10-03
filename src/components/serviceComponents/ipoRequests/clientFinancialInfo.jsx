@@ -22,17 +22,19 @@ const ClientFinancialInfo = ({ style }) => {
   return (
     <CustomCard>
   
-    <div className="row justify-content-around align-items-center">
-    <div className="col-6 d-flex flex-column align-items-center justify-content-center" style={{ height: '100%' }}>
-      <p className="label-text">Available Balance</p>
-      <p className="value-text">{Number(ipoClientFinancialInfo?.availableBalance)?.toFixed(2)}</p>
-    </div>
+  <div className="d-flex flex-row justify-content-around">
+  <div className="col-6 d-flex flex-column justify-content-center align-items-center">
+    <p className="label-text-client-FinData" style={{ margin: 0 }}>Available Balance</p>
+    <p className="value-text-client-FinData" style={{ margin: 0 }}>{Number(ipoClientFinancialInfo?.availableBalance)?.toFixed(2)}</p>
+  </div>
 
-      <div className="col-6 d-flex flex-column align-items-center justify-content-center" style={{ height: '100%' }}>
-        <p className="label-text">Purchase Power</p>
-        <p className="value-text">{Number(ipoClientFinancialInfo?.purchasePower)?.toFixed(2)}</p>
-      </div>
-    </div>
+  <div className="col-6 d-flex flex-column justify-content-center align-items-center">
+    <p className="label-text-client-FinData" style={{ margin: 0 }}>Purchase Power</p>
+    <p className="value-text-client-FinData" style={{ margin: 0 }}>{Number(ipoClientFinancialInfo?.purchasePower)?.toFixed(2)}</p>
+  </div>
+</div>
+
+
 
 </CustomCard>
 

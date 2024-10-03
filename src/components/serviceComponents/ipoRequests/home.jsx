@@ -6,6 +6,7 @@ import CustomCheckbox from '../../commonComponents/CustomCheckbox'
 import '../../../assets/css/commonStyle/checkBox.css';
 import '../../../assets/css/ipoRequestStyle/ipoStyle.css';
 import IpoAppFormSvg from '../../../assets/images/ipoAppFormSvg';
+import SubmitButton from '../../commonComponents/SubmitButton';
 
 export default function home() {
 
@@ -103,7 +104,7 @@ const onSubmit = async()=>{
         onboarding={false}
         containerStyle='checkbox-container'
         textStyle='checkbox-textStyle'
-      />
+    />
 
     <div className="application-form-header">
       <h5 className="application-Header-label-text">Application Form</h5>
@@ -124,6 +125,17 @@ const onSubmit = async()=>{
      <AppliedIPO itemArray={itemArray} />
     )}
         
+
+    <div
+     className='flex-column px-1.5 my-2'
+     style={{
+      display:"flex",
+      justifyContent:"center",
+     }}
+     >
+     <SubmitButton label="Submit"/>
+     </div>
+
     </>
   
   )
