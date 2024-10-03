@@ -45,6 +45,8 @@ function CashDeposit() {
      label="Select Deposit Bank"
      dropDownItems={bankList}
      className={`${serviceTextField} py-2`}
+     nameKey="bankName"
+     valueKey="bankID"
      />
     
      </div>
