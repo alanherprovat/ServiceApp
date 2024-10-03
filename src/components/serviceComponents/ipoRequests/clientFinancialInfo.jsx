@@ -17,7 +17,7 @@ const ClientFinancialInfo = ({ style }) => {
       const res = await IpoClientFinancialInfo();
       setIpoClientFinancialInfo(res);
     })();
-  }, [ipoClientFinancialInfo]);
+  }, []);
 
   return (
     <CustomCard>

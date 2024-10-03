@@ -19,3 +19,20 @@
    
   }
    
+  .application-form-header {
+    display: flex;
+    flex-direction: row; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center align */
+    align-items: center; /* Vertical center align */
+    margin-top: 20px; /* Equivalent to marginTop */
+    border-top: 1px solid #ccc; /* Adds a border at the top */
+    padding-top: 10px; /* Equivalent to paddingVertical */
+    padding-bottom: 10px; /* Equivalent to paddingVertical */
+  }
+  
+  .application-Header-label-text {
+    font-family: 'Inter', sans-serif; /* Ensure the font family is correct */
+    font-size: 12px; /* Font size */
+    font-weight: 600; /* Font weight */
+    color: #000; /* Text color */
+  }

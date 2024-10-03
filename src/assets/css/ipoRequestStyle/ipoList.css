@@ -1,0 +1,144 @@
+.col-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc; /* Border bottom */
+    padding-bottom: 10px; /* Padding at the bottom */
+  }
+  
+  .label-text-eligible-ipo {
+    color: #152035b2;
+    font-family: 'K2D', sans-serif; /* Ensure that 'K2D' is loaded */
+    font-size: 14px;
+    font-weight: 600; /* Semi-bold */
+    line-height: 18.2px;
+    letter-spacing: 0.24px;
+    text-align: left;
+  }
+
+.ipo-list-container {
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .ipo-list-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .instrument-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 5px;
+   
+  }
+  
+  .main-row-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+  
+  .security-label {
+    font-weight: 400; /* Regular weight */
+    font-family: 'k2d-bold', sans-serif; /* Ensure the font is imported */
+    font-size: 12px;
+    line-height: 15.6px;
+    text-align: left;
+    color: #596170;
+    /* min-width: 0;  */
+  }
+  
+  .custom-checkbox {
+    margin-left: 8px; /* Adds spacing between label and checkbox */
+  }
+  
+  .instrument-name {
+    font-family: 'Inter', sans-serif; /* Ensure the font is imported */
+    font-style: italic;
+    font-size: 8px;
+    color: #596170;
+    
+  }
+  
+
+  .date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+  }
+  
+  .subs-date-label {
+    font-weight: 400; /* Regular weight */
+    font-family: 'k2d-regular', sans-serif; /* Ensure the font is loaded */
+    font-size: 10px;
+    line-height: 11.7px;
+    text-align: left;
+    color: #596170;
+  }
+  
+  .date-text {
+    font-family: 'Inter', sans-serif; /* Ensure the font is loaded */
+    font-size: 8px;
+    font-style: italic;
+    font-weight: 400; /* Regular weight */
+    line-height: 12.1px;
+    letter-spacing: 0.02em; /* Approximate to the em value */
+    text-align: left;
+    color: #596170;
+  }
+  
+  
+  
+  .custom-checkbox {
+    margin-left: 10px;
+  }
+  
+
+
+  .subscription-label {
+    font-weight: bold;
+    font-size: 9px;
+    color: #596170;
+  }
+  
+
+  
+.button-container {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 5px;
+    flex-direction: column; /* Align vertically within this column */
+}
+
+.apply-button {
+    border-radius: 3px;
+    width: auto; /* Adjust width to fit content */
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 8px; /* Equivalent to paddingHorizontal and paddingVertical */
+    background-color: #24834AE5; /* Custom background color */
+    color: #FFFFFF; /* Custom text color */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Using Bootstrap's .disabled class instead */
+.disabled-button {
+    background-color: rgba(76, 175, 80, 0.5); /* Disabled button color */
+    cursor: not-allowed; /* Cursor changes when button is disabled */
+}
+
+.apply-button:hover:not(:disabled) {
+    background-color: #207B40; /* Darken color on hover */
+}
+
+  
