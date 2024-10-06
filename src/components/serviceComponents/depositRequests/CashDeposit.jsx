@@ -20,14 +20,16 @@ function CashDeposit() {
       "bankName":"City Bank"
     },
   ]
-  const [document,setDocument] = useState(null)
+  const [document,setDocument] = useState(null);
+  const [showDeposit,setShowDeposit] = useState(false)
   return (
     <div
-    className="container-fluid d-flex flex-column justify-content-between vh-100 w-100 mx-auto mt-4" // Bootstrap classes for centering and margin // Custom width style
+    className="container-fluid d-flex flex-column justify-content-between vh-100 w-100 w-sm-25 mx-auto mt-4" // Bootstrap classes for centering and margin // Custom width style
+    style={{ overflowY: "auto" }}
   >
    
     
-    <div className="d-flex flex-column px-5 position-relative" style={{ flexGrow: 0.5 }}>
+    <div className="d-flex flex-column position-relative" style={{ flexGrow: 0.5 }}>
     <ServiceTitle label="Cash Deposit"/>
     <label className={`${formLabel} mt-2`} style={{fontFamily:"K2d-Bold"}}>Document</label>
     <DocumentPicker document={document} setDocument={setDocument} label="Attach Bank Document"/>
@@ -44,15 +46,18 @@ function CashDeposit() {
      /> */}
      <Selector
      label="Select Deposit Bank"
+     placeholder="Deposit Banks"
      dropDownItems={bankList}
      className={`${serviceTextField} py-2`}
      nameKey="bankName"
      valueKey="bankID"
+     show={showDeposit}
+     setShow={setShowDeposit}
      />
     
      </div>
      <div
-     className='flex-column px-5 my-2'
+     className='flex-column my-2'
      style={{
       display:"flex",
       justifyContent:"center",

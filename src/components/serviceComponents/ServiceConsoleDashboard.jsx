@@ -3,7 +3,7 @@ import {
   WithdrawalRequestIcon,
   IpoRequestIcon,
   ChangeRequestIcon,
-} from "../../config/svgIcons/ServiceConsoleIcons.jsx";
+} from "../../../config/svgIcons/ServiceConsoleIcons.jsx";
 import "../../assets/css/serviceConsoleDashboardStyle.css";
 import ServiceConsoleHistoryList from "../../helper/ServiceConsoleHistoryList.jsx";
 

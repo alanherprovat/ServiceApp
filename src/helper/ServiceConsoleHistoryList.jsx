@@ -8,16 +8,16 @@ const ServiceConsoleHistoryList = () => {
       header: "sadia",
       detail:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod",
-      requestType: "Deposit Request",
+      requestType: "Deposit",
       date: "30.08.24",
-      status: "In-Progress",
+      status: "Pending",
     },
     {
       eventKey: 2,
       header: "sadia",
       detail:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod",
-      requestType: "Deposit Request",
+      requestType: "Deposit",
       date: "30.08.24",
       status: "Completed",
     },
@@ -26,18 +26,18 @@ const ServiceConsoleHistoryList = () => {
       header: "sadia",
       detail:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod",
-      requestType: "Deposit Request",
+      requestType: "Deposit",
       date: "30.08.24",
-      status: "In-Progress",
+      status: "Pending",
     },
     {
       eventKey: 4,
       header: "sadia",
       detail:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod",
-      requestType: "Deposit Request",
+      requestType: "Deposit",
       date: "30.08.24",
-      status: "In-Progress",
+      status: "Pending",
     },
   ];
   return (
@@ -61,7 +61,7 @@ const ServiceConsoleHistoryList = () => {
                 </div>
                 <div>
                   <p className="headerTextStyle">Status</p>
-                  <p style={{color: item.status=="In-Progress"? "#153F98" : "#21951E"}}>{item.status}</p>
+                  <p style={{color: item.status=="Pending"? "#153F98" : "#21951E"}}>{item.status}</p>
                 </div>
               </div>
             </Accordion.Header>

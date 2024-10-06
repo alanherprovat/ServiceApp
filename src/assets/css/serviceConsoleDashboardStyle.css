@@ -65,3 +65,15 @@
 .accordion-body {
   border-bottom: 1px solid #526d82bf;
 }
+
+.serviceConsoleFormLabel {
+  color: #655C5C;
+  font-size: 12px;
+  font-weight: 700;
+  /* font-family: 'K2d-Regular', sans-serif; */
+}
+
+.serviceConsoleInputField {
+  border: 1px solid #526D82BF;
+  border-radius: 8px;
+}
