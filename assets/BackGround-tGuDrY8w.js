@@ -1,0 +1,1 @@
+import{j as r}from"./index-CzUUUfa7.js";function n({children:o}){return r.jsx("div",{className:"container mx-auto",style:{backgroundColor:"#F6F8FA",minHeight:"100%",minWidth:"100%",overflowY:"scroll"},children:o})}export{n as B};
