@@ -10,7 +10,7 @@ function SignatureInfo() {
   return (
     <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}>
       <div className="container d-flex flex-column mx-auto pt-5" style={{ minHeight: '100vh' }}>
-      <label className="serviceConsoleFormLabel my-2">Signature</label>
+      <label className="serviceConsoleFormLabel mt-2">Signature</label>
       <DocumentPicker
         document={document}
         setDocument={setDocument}

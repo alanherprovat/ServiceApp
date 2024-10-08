@@ -8,6 +8,7 @@ import '../../../assets/css/commonStyle/checkBox.css';
 import '../../../assets/css/ipoRequestStyle/ipoStyle.css';
 import IpoAppFormSvg from '../../../assets/images/ipoAppFormSvg';
 import SubmitButton from '../../commonComponents/SubmitButton';
+import BackGround from '../../commonComponents/BackGround';
 
 export default function home() {
 
@@ -92,7 +93,7 @@ const onSubmit = async()=>{
 }
 
   return (
-    <div  style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}>
+    <div  style={{ backgroundColor: "#F6F8FA", minheight: "100vh", width: "100%",overflowY:"auto" }}>
       <ClientFinancialInfo/>
       <IpoList
         selectedItems={selectedItems} 
@@ -145,7 +146,14 @@ const onSubmit = async()=>{
             justifyContent:"center",
           }}
           >
+          <div
+          style={{
+            paddingBottom:"60px"
+          }}
+          >
           <SubmitButton label="Submit" onSubmit={onSubmit}/>
+          </div>
+         
           </div>
 
 

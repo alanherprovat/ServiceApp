@@ -7,9 +7,10 @@ function BackGround({children}) {
     className='container mx-auto'
     style={{
         backgroundColor:"#F6F8FA",
-        minHeight:"100%",
+        minHeight:"100vh",
         minWidth:"100%",
-        overflowY:"scroll"
+        overflowY:"auto",
+        paddingBottom:"50px"
     }}
     >{children}
     </div>

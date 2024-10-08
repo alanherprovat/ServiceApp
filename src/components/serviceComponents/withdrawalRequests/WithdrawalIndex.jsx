@@ -14,14 +14,14 @@ const WithdrawalIndex = () => {
         title: "BFTN",
         icon: <InactiveBFTNIcon />,
         activeIcon: <ActiveBFTNIcon />,
-        content: () => <OnlineWithdrawal />,
+        content: () => <OnlineWithdrawal title="BFTN" />,
       },
       {
         key: "rtgs",
         title: "RTGS",
         icon:<InactiveRTGSIcon />,
         activeIcon:<ActiveRTGSIcon />,
-        content: () => <OnlineWithdrawal />,
+        content: () => <OnlineWithdrawal title="RTGS" />,
       },
       {
         key: "cheque",
@@ -45,7 +45,7 @@ const WithdrawalIndex = () => {
         if (scrollViewRef.current) {
           scrollViewRef.current.scrollTo({
             left: index * window.innerWidth, // Scroll horizontally to the tab
-            behavior: "smooth",
+            behavior: "auto",
           });
         }
       };

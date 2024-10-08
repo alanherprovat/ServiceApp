@@ -9,14 +9,14 @@ function ServiceTitle({label}) {
       //  boxShadow: "0 4px 4px rgba(82, 109, 130, 0.75)"
     }}
     >
-        <text
+        <p
         style={{
             fontFamily: "k2d-bold",
             fontSize: 20,
             textAlign: "center",
 
         }}
-        >{label}</text>
+        >{label}</p>
     </div>
   )
 }

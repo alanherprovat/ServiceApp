@@ -49,9 +49,20 @@ const ServiceInput = (props) => {
         />
 
         {rightIcon && (
-          <Button variant="outline-secondary" onClick={rightIconPress}>
+          <button  style={{
+            outline: "none",
+            borderLeft: "1px solid #fff",
+            borderRight: "1px solid 526D82",
+            borderTop: "1px solid #526D82",
+            borderBottom: "1px solid #526D82",
+            borderTopRightRadius: 8,
+            borderBottomRightRadius: 8,
+            background: "#fff",
+            padding: "10px",
+            cursor: "pointer"
+          }} variant="outline-secondary" onClick={rightIconPress}>
             <i className={`bi bi-${rightIcon}`}></i>
-          </Button>
+          </button>
         )}
       </InputGroup>
     </div>

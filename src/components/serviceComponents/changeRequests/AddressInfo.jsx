@@ -38,7 +38,7 @@ function AddressInfo() {
         <label className="serviceConsoleFormLabel my-2">Present Address</label>
         <ServiceInput value="" style={{ borderColor: "#526D82" }} readOnly />
 
-        <label className="serviceConsoleFormLabel my-2">Utility File</label>
+        <label className="serviceConsoleFormLabel mt-2">Utility File</label>
         <DocumentPicker
           document={document}
           setDocument={setDocument}

@@ -74,7 +74,7 @@ function ChangeRequestIndex() {
     if (scrollViewRef.current) {
       scrollViewRef.current.scrollTo({
         left: index * window.innerWidth, // Scroll horizontally to the tab
-        behavior: "smooth",
+        behavior: "auto",
       });
     }
   };
@@ -115,19 +115,19 @@ function ChangeRequestIndex() {
       }}
     >
       <div>{activeTab === index ? item.activeIcon : item.icon}</div>
-      <text
+      <p
         style={{
           fontSize: 12,
         }}
       >
         {item.title}
-      </text>
+      </p>
     </button>
   );
 
   return (
     <div
-      className="container-fluid d-flex flex-column vh-100 w-100 p-0"
+      className="container-fluid d-flex flex-column vh-100 w-100 p-0 z-2"
       style={{
         flex: 1,
       }}

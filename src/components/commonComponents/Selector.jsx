@@ -30,16 +30,16 @@ function Selector({
 
       <button
         onClick={() => setShow(!show)}
-        className={`${className} d-flex py-2 my-2`}
+        className={`${className} d-flex my-2 py-2`}
         style={{
           fontFamily: "k2d-regular",
           borderColor: "#526D82",
           overflow: "hidden",
           backgroundColor: "#fff",
-          fontSize: 8,
+          fontSize: 8
         }}
       >
-        <text
+        <div
           className="ms-1"
           style={{
             color: selectedValue ? "#000" : "#8D8F97",
@@ -47,7 +47,7 @@ function Selector({
           }}
         >
           {selectedValue ? selectedValue : placeholder}
-        </text>
+        </div>
       </button>
 
       {show && (

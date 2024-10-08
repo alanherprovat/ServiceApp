@@ -197,8 +197,8 @@ export const ActiveHistory = ({props}) =>(
 )
 export const IpoIconActive = ({props}) => (
 <svg
-    width={40}
-    height={41}
+    width={30}
+    height={31}
     viewBox="0 0 40 41"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -212,8 +212,8 @@ export const IpoIconActive = ({props}) => (
 )
 export const IpoIconInActive = ({props}) => (
   <svg
-    width={40}
-    height={41}
+    width={30}
+    height={31}
     viewBox="0 0 40 41"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

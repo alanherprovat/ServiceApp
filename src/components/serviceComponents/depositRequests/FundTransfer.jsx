@@ -19,17 +19,16 @@ function FundTransfer() {
   return (
      <BackGround>
       <div
-      className="d-flex flex-column mt-4  w-100"
+      className="d-flex flex-column mt-4"
       style={{
-        height: "100%", 
-        overflowY: "scroll",
+        minheight: "100%", 
+        overflowY: "auto",
       }}
     >
       <div className="d-flex flex-column">
         <ServiceTitle label="Fund Transfer" />
         <label
-          className={`${formLabel} mt-2`}
-          style={{ fontFamily: "K2d-Bold",color:"#655C5C"}}
+          className="serviceConsoleFormLabel"
         >
           Document
         </label>

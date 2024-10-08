@@ -28,7 +28,7 @@ const TinInfo = () => {
         </>
       )}
 
-      <label className="serviceConsoleFormLabel my-2">TIN Certificate</label>
+      <label className="serviceConsoleFormLabel mt-2">TIN Certificate</label>
       <DocumentPicker
         document={document}
         setDocument={setDocument}

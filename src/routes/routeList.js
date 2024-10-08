@@ -22,7 +22,6 @@ export const serviceRouteList = [
         url: 'changeRequest',
         component: lazy(() => import('../components/serviceComponents/changeRequests/ChangeRequestIndex')),
     },
-    
 ];
 // export const unAuthorizedRoutes = [
 //     {

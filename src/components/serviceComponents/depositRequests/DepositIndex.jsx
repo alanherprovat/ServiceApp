@@ -84,13 +84,13 @@ export default function DepositIndex() {
           <div>
             {activeTab === index ? item.activeIcon : item.icon}
           </div>
-          <text
+          <p
           style={{
             fontSize:12
           }}
           >
             {item.title}
-          </text>
+          </p>
         </button>
   );
 

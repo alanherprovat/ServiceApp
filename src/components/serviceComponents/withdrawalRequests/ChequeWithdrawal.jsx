@@ -14,6 +14,7 @@ import Selector from "../../commonComponents/Selector";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { allBankList } from "../../../Data/AllBankList";
+import RegisteredBankInfo from "./RegisteredBankInfo";
 
 const ChequeWithdrawal = () => {
   const [isSelected, setIsSelected] = useState(false);
@@ -30,7 +31,7 @@ const ChequeWithdrawal = () => {
   };
   return (
     <div
-      style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}
+      style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%", overflowY: "auto" }}
     >
       <div
         className="container d-flex flex-column mx-auto pt-5"
@@ -40,55 +41,7 @@ const ChequeWithdrawal = () => {
         <ServiceTitle label="Cheque" />
 
         {!differentAccount ? (
-          <>
-            <div>
-              <label className="serviceConsoleFormLabel">
-                Client Bank Account Number
-              </label>
-              <ServiceInput
-                value=""
-                onChange={() => {}}
-                className={serviceTextField}
-                style={{ borderColor: "#526D82" }}
-              />
-            </div>
-
-            <div>
-              <label className="serviceConsoleFormLabel">
-                Client Bank Name
-              </label>
-              <ServiceInput
-                value=""
-                onChange={() => {}}
-                className={serviceTextField}
-                style={{ borderColor: "#526D82" }}
-              />
-            </div>
-
-            <div>
-              <label className="serviceConsoleFormLabel">
-                Client Bank Branch
-              </label>
-              <ServiceInput
-                value=""
-                onChange={() => {}}
-                className={serviceTextField}
-                style={{ borderColor: "#526D82" }}
-              />
-            </div>
-
-            <div>
-              <label className="serviceConsoleFormLabel">
-                Client Bank Routing Number
-              </label>
-              <ServiceInput
-                value=""
-                onChange={() => {}}
-                className={serviceTextField}
-                style={{ borderColor: "#526D82" }}
-              />
-            </div>
-          </>
+          <RegisteredBankInfo />
         ) : (
           <>
             <div>
@@ -106,8 +59,7 @@ const ChequeWithdrawal = () => {
             <div>
               <label className="serviceConsoleFormLabel">Client Bank Name</label>
               <Selector
-                label="Client Bank"
-                placeholder="All Bank List"
+                placeholder="Select Bank Name"
                 dropDownItems={allBankList}
                 className={`${serviceTextField} py-2 px-2 w-100`}
                 valueKey="bankID"

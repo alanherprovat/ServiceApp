@@ -37,7 +37,7 @@ export default function IPOIndex() {
     if (scrollViewRef.current) {
       scrollViewRef.current.scrollTo({
         left: index * window.innerWidth, // Scroll horizontally to the tab
-        behavior: "smooth",
+        behavior: "auto",
       });
     }
   };
@@ -61,18 +61,15 @@ export default function IPOIndex() {
       style={{
         padding: "8px 16px",
         borderTop: activeTab === index ? "2px solid #FF0008" : "2px solid #fff",
-        borderBottom: "none",
-        borderRight: "none",
-        borderLeft: "none",
         backgroundColor: "transparent",
         cursor: "pointer",
         textAlign: "center",
         borderRadius: 0,
         fontFamily: "k2d-bold",
-        flex: 1,
         outline: "none",
-        // Add shadow styles
-        // Smooth transition for the shadow
+        borderBottom: "none",
+        borderLeft: "none",
+        borderRight: "none",
       }}
     >
       <div>{activeTab === index ? item.activeIcon : item.icon}</div>
@@ -87,11 +84,10 @@ export default function IPOIndex() {
   );
 
   return (
-    <div
-      className="container-fluid d-flex flex-column vh-100 w-100 p-0"
-      // style={{
-      //     flex:1
-      // }}
+    <div className="container-fluid d-flex flex-column vh-100 w-100 p-0"
+    style={{
+        flex:1
+    }}
     >
       {/* Swipeable Content Views */}
       <div
@@ -100,14 +96,14 @@ export default function IPOIndex() {
         style={{
           scrollSnapType: "x mandatory", // Ensure smooth snapping
           width: "100%",
-          overflowX: "scroll",
+          overflowX: "scroll"
         }}
         onScroll={handleScroll} // Attach the scroll handler
       >
         {routes.map((route, index) => (
           <div
             key={route.key}
-            className="flex-grow-1 d-flex flex-column mx-3"
+            className="flex-grow-1 d-flex justify-content-center mx-3"
             style={{
               minWidth: "100%", // Ensure each section takes full width
               scrollSnapAlign: "start", // Enable smooth snapping
@@ -122,17 +118,28 @@ export default function IPOIndex() {
       <div
         className="d-flex justify-content-around bg-white position-fixed"
         style={{
-          flex: 1,
-          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)", // Shadow for active tab // No shadow for inactive tabs
-          transition: "box-shadow 0.3s ease",
-          width: "100%",
-          left: 0,
-          right: 0,
-          bottom: 0,
+            flex:1,
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)", // Shadow for active tab // No shadow for inactive tabs
+            transition: "box-shadow 0.3s ease",
+            width:"100%",
+            left: 0,
+            right: 0,
+            bottom:0
         }}
       >
         {routes.map((route, index) => renderTabButton(route, index))}
       </div>
+      <style jsx>{`
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        .flex-grow-1::-webkit-scrollbar {
+          display: none;
+        }
+        /* Hide scrollbar for all browsers */
+        .flex-grow-1 {
+          -ms-overflow-style: none;  /* Internet Explorer 10+ */
+          scrollbar-width: none;  /* Firefox */
+        }
+      `}</style>
     </div>
   );
 }

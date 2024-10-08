@@ -40,10 +40,9 @@ function BankInfo() {
 
         {editBank && (
           <>
-            <label className="serviceConsoleFormLabel my-2">Bank Name</label>
+            <label className="serviceConsoleFormLabel my-2">Updated Bank Name</label>
             <Selector
-              label="Client Bank"
-              placeholder="Select Bank"
+              placeholder="Select Bank Name"
               dropDownItems={allBankList}
               className={`${serviceTextField} w-100`}
               valueKey="bankID"
@@ -72,11 +71,10 @@ function BankInfo() {
         {editBranch && (
           <>
             <label className="serviceConsoleFormLabel my-2">
-              Select Updated Branch
+              Updated Branch Name
             </label>
             <Selector
-              label="Client Bank"
-              placeholder="Select Branch"
+              placeholder="Select Branch Name"
               dropDownItems={allBankList}
               className={`${serviceTextField} w-100`}
               valueKey="bankID"
