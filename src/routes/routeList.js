@@ -2,53 +2,26 @@ import { lazy } from 'react';
 
 export const serviceRouteList = [
     {
-        url: '/',
+        url: '',
         component: lazy(() => import('../components/serviceComponents/ipoRequests/ipoIndex')),
     },
     {
-        url: '/serviceConsoleDashboard',
+        url: 'withdrawalRequest',
+        component: lazy(() => import('../components/serviceComponents/withdrawalRequests/WithdrawalIndex')),
+    },
+    
+    {
+        url: 'serviceConsoleDashboard',
         component: lazy(() => import('../components/serviceComponents/ServiceConsoleDashboard'))
     },
     {
-        url: '/depositRequest',
+        url: 'depositRequest',
         component: lazy(() => import('../components/serviceComponents/depositRequests/DepositIndex')),
     },
     {
-        url: '/changeRequest',
+        url: 'changeRequest',
         component: lazy(() => import('../components/serviceComponents/changeRequests/ChangeRequestIndex')),
     },
-    {
-        url: '/serviceConsoleDashboard',
-        component: lazy(() => import('../components/serviceComponents/ServiceConsoleDashboard'))
-    },
-    {
-        url: '/depositRequest',
-        component: lazy(() => import('../components/serviceComponents/depositRequests/DepositIndex')),
-    },
-    {
-        url: '/cashDeposit',
-        component: lazy(() => import('../components/serviceComponents/depositRequests/CashDeposit')),
-    },
-    {
-        url: '/fundTransfer',
-        component: lazy(() => import('../components/serviceComponents/depositRequests/FundTransfer'))
-    },
-    {
-        url: '/MFS',
-        component: lazy(() => import('../components/serviceComponents/depositRequests/MobileFundTransfer'))
-    },
-    {
-        url: '/BFTN',
-        component: lazy(() => import('../components/serviceComponents/withdrawalRequests/OnlineWithdrawal'))
-    },
-    {
-        url: '/TIN',
-        component: lazy(() => import('../components/serviceComponents/changeRequests/TinInfo'))
-    },
-    {
-        url: '/Contact',
-        component: lazy(() => import('../components/serviceComponents/changeRequests/ContactInfo'))
-    }
     
 ];
 // export const unAuthorizedRoutes = [
