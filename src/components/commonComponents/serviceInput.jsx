@@ -24,7 +24,7 @@ const ServiceInput = (props) => {
     // }
   }, [props.id]);
   return (
-    <div className={props.className}>
+    <div >
       <InputGroup className={`${className}`} style={props.style}>
         {leftIcon && (
           <Button variant="outline-secondary" onClick={leftIconPress}>
@@ -36,11 +36,16 @@ const ServiceInput = (props) => {
           {...props}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className={className} 
+          // className={className} 
           ref={inputRef}
           // onFocus={() => setFocusStyle(true)}
           // onBlur={() => setFocusStyle(false)}
           disabled={!editable}
+          readOnly={props.readOnly}
+          style={{
+            backgroundColor: props.readOnly ? "#B7B5B699" : "#fff", 
+            ...style, 
+          }}
         />
 
         {rightIcon && (

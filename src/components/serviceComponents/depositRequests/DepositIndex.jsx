@@ -46,7 +46,7 @@ export default function DepositIndex() {
     if (scrollViewRef.current) {
       scrollViewRef.current.scrollTo({
         left: index * window.innerWidth, // Scroll horizontally to the tab
-        behavior: "smooth",
+        behavior: "auto",
       });
     }
   };
@@ -67,13 +67,16 @@ export default function DepositIndex() {
           className={`btn ${activeTab === index ? "text-danger" : "text-muted"}`}
           style={{
             padding: "8px 16px",
-            borderTop: activeTab === index ? "2px solid #FF0008" : "1px solid #D6BDBE",
+            borderTop: activeTab === index ? "2px solid #FF0008" : "2px solid #fff",
             backgroundColor: "transparent",
             cursor: "pointer",
             textAlign: "center",
             borderRadius: 0,
             fontFamily: "k2d-bold",
-            flex:1,
+            outline:"none",
+            borderBottom:"none",
+            borderLeft:"none",
+            borderRight:"none"
             // Add shadow styles
             // Smooth transition for the shadow
           }}
@@ -81,9 +84,13 @@ export default function DepositIndex() {
           <div>
             {activeTab === index ? item.activeIcon : item.icon}
           </div>
-          <div>
+          <text
+          style={{
+            fontSize:12
+          }}
+          >
             {item.title}
-          </div>
+          </text>
         </button>
   );
 
@@ -107,7 +114,7 @@ export default function DepositIndex() {
         {routes.map((route, index) => (
           <div
             key={route.key}
-            className="flex-grow-1 d-flex justify-content-center align-items-center"
+            className="flex-grow-1 d-flex justify-content-center mx-3"
             style={{
               minWidth: "100%", // Ensure each section takes full width
               scrollSnapAlign: "start", // Enable smooth snapping

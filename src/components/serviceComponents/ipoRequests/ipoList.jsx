@@ -38,6 +38,7 @@ export default function IpoList({ selectedItems, multipleSelect, handleSelect, s
                                         onPress={() => handleSelect(index, item)}
                                         onboarding={false}
                                         containerStyle='checkbox-container'
+                                        styles={'linear-gradient(207.66deg, rgba(240, 64, 72, 0.8) 16.74%, rgba(242, 113, 72, 0.8) 63.47%)'}
                                         // textStyle='checkbox-textStyle'
                                     />
                                     </div>

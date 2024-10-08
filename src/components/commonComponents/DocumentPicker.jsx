@@ -15,7 +15,7 @@ function DocumentPicker({ document,setDocument,label }) {
   }
   return (
     <div
-    className="mt-2"
+    className="mt-2 py-2"
       style={{
         display: "flex",
         justifyContent: "center",
@@ -23,7 +23,6 @@ function DocumentPicker({ document,setDocument,label }) {
         borderColor: "#C2AEAE",
         borderWidth: 2,
         borderRadius: 8,
-        padding: 4,
         borderStyle: "dashed",
       }}
     >
@@ -38,15 +37,18 @@ function DocumentPicker({ document,setDocument,label }) {
         document?<text
         style={{
           fontFamily:"K2d-Bold",
+          color:"#8D8F97",
           textAlign:"center"
         }}
         >{document.name}<sup onClick={handleClose}><IoMdClose/></sup></text>: <button
         onClick={handleClick}
         style={{
-          backgroundColor: "white",
+          backgroundColor: "transparent",
+          fontSize:14,
           fontFamily: "K2d-Bold",
           border: "none",
           cursor: "pointer",
+          color:"#655C5C"
         }}
       >
         {label}

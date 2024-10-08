@@ -123,13 +123,18 @@
 .apply-button {
     border-radius: 3px;
     width: auto; /* Adjust width to fit content */
-    height: inherit;
+    font-family: 'K2D-Regular';
+    font-weight: 400;
+    height: auto;
     justify-content: center;
     align-items: center;
-    padding: 1px 8px; /* Equivalent to paddingHorizontal and paddingVertical */
+    padding: 2px 10px; /* Equivalent to paddingHorizontal and paddingVertical */
+    font-size: 12px;
+    /* line-height: 11.18px; */
     background-color: #24834AE5; /* Custom background color */
     color: #FFFFFF; /* Custom text color */
     cursor: pointer; /* Change cursor to pointer */
+    border: none;
 }
 
 /* Using Bootstrap's .disabled class instead */

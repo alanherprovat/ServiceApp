@@ -20,7 +20,7 @@
   
   .text-field {
     padding: 5px 10px;
-    margin-left: auto;
+    /* margin-left: auto; */
     font-size: 12px;
     font-weight: bold;
     text-align: center;

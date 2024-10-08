@@ -9,20 +9,27 @@ import DocumentPicker from "../../commonComponents/DocumentPicker";
 import ServiceTitle from "../../commonComponents/ServiceTitle";
 import SubmitButton from "../../commonComponents/SubmitButton";
 import { allBankList, depositBankList } from "../../../Data/AllBankList";
+import BackGround from "../../commonComponents/BackGround";
+import "../../../assets/css/serviceConsoleDashboardStyle.css";
 function FundTransfer() {
   const [document, setDocument] = useState(null);
   const [showDeposit,setShowDeposit] = useState(false);
   const [showClient,setShowClient] = useState(false);
   const [showBranch,setShowBranch] = useState(false);
   return (
-    <div
-      className="container-fluid d-flex flex-column mt-4 vh-100 w-100" // Bootstrap classes for centering and margin // Custom width style
+     <BackGround>
+      <div
+      className="d-flex flex-column mt-4  w-100"
+      style={{
+        height: "100%", 
+        overflowY: "scroll",
+      }}
     >
-      <div className="d-flex flex-column px-5" style={{ flexGrow: 0.5 }}>
+      <div className="d-flex flex-column">
         <ServiceTitle label="Fund Transfer" />
         <label
           className={`${formLabel} mt-2`}
-          style={{ fontFamily: "K2d-Bold" }}
+          style={{ fontFamily: "K2d-Bold",color:"#655C5C"}}
         >
           Document
         </label>
@@ -31,7 +38,8 @@ function FundTransfer() {
           setDocument={setDocument}
           label="Attach Bank Document"
         />
-        <label className={`${formLabel}`} style={{ fontFamily: "K2d-Bold" }}>
+        <div className="mt-3"/>
+        <label className="serviceConsoleFormLabel">
           Amount
         </label>
         <ServiceInput
@@ -39,28 +47,31 @@ function FundTransfer() {
           placeholder="Enter Deposit Amount"
           onChange={() => {}}
           className={serviceTextField}
-          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular"}}
         />
+        <div className="mt-2"/>
         <Selector
           label="Select Deposit Bank"
           placeholder="Deposit Bank List"
           dropDownItems={depositBankList}
-          className={`${serviceTextField} py-2 px-2`}
+          className={`${serviceTextField} px-2`}
           valueKey="bankID"
           nameKey="bankName"
           show={showDeposit}
           setShow={setShowDeposit}
         />
+        <div className="mt-2"/>
         <Selector
           label="Client Bank"
           placeholder="All Bank List"
           dropDownItems={allBankList}
-          className={`${serviceTextField} py-2 px-2`}
+          className={`${serviceTextField} px-2`}
           valueKey="bankID"
           nameKey="bankName"
           show={showClient}
           setShow={setShowClient}
         />
+        <div className="mt-2"/>
         <Selector
           label="Client Branch"
           placeholder="Branch List"
@@ -69,9 +80,9 @@ function FundTransfer() {
           show={showBranch}
           setShow={setShowBranch}
         />
+        <div className="mt-2"/>
         <label
-          className={`${formLabel} mt-2`}
-          style={{ fontFamily: "K2d-Bold" }}
+          className="serviceConsoleFormLabel"
         >
           Routing
         </label>
@@ -80,12 +91,15 @@ function FundTransfer() {
           placeholder="Bank Routing Number"
           onChange={() => {}}
           className={serviceTextField}
-          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular"}}
         />
       </div>
       <div
-        className="flex-column px-5 my-2"
         style={{
+          position: "sticky", 
+          bottom: "0px",
+          left: "0",
+          right: "0",
           display: "flex",
           justifyContent: "center",
         }}
@@ -93,6 +107,9 @@ function FundTransfer() {
         <SubmitButton label="Submit" />
       </div>
     </div>
+    </BackGround>
+    
+    
   );
 }
 

@@ -3,7 +3,19 @@ import { lazy } from 'react';
 export const serviceRouteList = [
     {
         url: '/',
-        component: lazy(() => import('../components/serviceComponents/ipoRequests/home')),
+        component: lazy(() => import('../components/serviceComponents/ipoRequests/ipoIndex')),
+    },
+    {
+        url: '/serviceConsoleDashboard',
+        component: lazy(() => import('../components/serviceComponents/ServiceConsoleDashboard'))
+    },
+    {
+        url: '/depositRequest',
+        component: lazy(() => import('../components/serviceComponents/depositRequests/DepositIndex')),
+    },
+    {
+        url: '/changeRequest',
+        component: lazy(() => import('../components/serviceComponents/changeRequests/ChangeRequestIndex')),
     },
     {
         url: '/serviceConsoleDashboard',

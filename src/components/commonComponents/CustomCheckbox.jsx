@@ -10,6 +10,7 @@ const CustomCheckbox = ({
   textStyle,
   label,
   onboarding,
+  styles,
   ...props
 }) => {
   return (
@@ -21,7 +22,7 @@ const CustomCheckbox = ({
       <div
         className={`custom-checkbox ${checkboxStyle}`}
         style={{
-          backgroundColor: checked ? (onboarding ? '#F27148CC' : '#2E8852') : '#76414133',
+          background: checked ? ( styles !==''? styles :'#2E8852') : '#76414133',
           position: 'relative', // Add relative positioning for better alignment
         }}
       >

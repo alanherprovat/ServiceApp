@@ -9,7 +9,8 @@ const TinInfo = () => {
   const [edit, setEdit] = useState(false);
 
   return (
-    <div className="container d-flex flex-column mx-auto" style={{ minHeight: '100vh' }}>
+    <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}>
+    <div className="container d-flex flex-column mx-auto pt-5" style={{ minHeight: '100vh' }}>
       <label className="serviceConsoleFormLabel mb-2">TIN Number</label>
       <ServiceInput
         value="09857948561"
@@ -20,23 +21,24 @@ const TinInfo = () => {
 
       {edit && (
         <>
-          <label className="serviceConsoleFormLabel mt-2 mb-2">
+          <label className="serviceConsoleFormLabel my-2">
             Enter New TIN Number
           </label>
           <ServiceInput value="" onChange={() => {}} style={{ borderColor: "#526D82" }} />
         </>
       )}
 
-      <label className="serviceConsoleFormLabel mt-2">TIN Certificate</label>
+      <label className="serviceConsoleFormLabel my-2">TIN Certificate</label>
       <DocumentPicker
         document={document}
         setDocument={setDocument}
         label="Attach TIN Certificate"
       />
 
-      <div className="mt-auto mb-2">
+      <div className="mt-auto" style={{marginBottom: "60px"}}>
         <SubmitButton label="Submit" />
       </div>
+    </div>
     </div>
   );
 };

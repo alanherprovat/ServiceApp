@@ -5,6 +5,8 @@ import Selector from '../../commonComponents/Selector'
 import DocumentPicker from '../../commonComponents/DocumentPicker'
 import ServiceTitle from '../../commonComponents/ServiceTitle'
 import SubmitButton from '../../commonComponents/SubmitButton'
+import BackGround from '../../commonComponents/BackGround'
+import "../../../assets/css/serviceConsoleDashboardStyle.css"
 function CashDeposit() {
   const bankList=[
     {
@@ -23,32 +25,35 @@ function CashDeposit() {
   const [document,setDocument] = useState(null);
   const [showDeposit,setShowDeposit] = useState(false)
   return (
-    <div
-    className="container-fluid d-flex flex-column justify-content-between vh-100 w-100 w-sm-25 mx-auto mt-4" // Bootstrap classes for centering and margin // Custom width style
-    style={{ overflowY: "auto" }}
+   <BackGround>
+     <div
+    className="d-flex flex-column justify-content-between w-100 mx-auto mt-4" // Bootstrap classes for centering and margin // Custom width style
+    // style={{ overflowY: "auto" }}
   >
    
     
-    <div className="d-flex flex-column position-relative" style={{ flexGrow: 0.5 }}>
+    <div className="d-flex flex-column position-relative" >
     <ServiceTitle label="Cash Deposit"/>
-    <label className={`${formLabel} mt-2`} style={{fontFamily:"K2d-Bold"}}>Document</label>
+    <label className='serviceConsoleFormLabel'>Document</label>
     <DocumentPicker document={document} setDocument={setDocument} label="Attach Bank Document"/>
-      <label className={`${formLabel}`} style={{fontFamily:"K2d-Bold"}}>Amount</label>
+    <div className='mt-3'/>
+      <label className="serviceConsoleFormLabel">Amount</label>
      <ServiceInput
      value=""
      placeholder="Enter Deposit Amount"
      onChange={()=>{}}
      className={serviceTextField}
-     style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
+     style={{ borderColor: "#526D82",fontFamily:"k2d-regular"}}
      />
      {/* <input
      className={serviceTextField}
      /> */}
+     <div className='mt-2'/>
      <Selector
      label="Select Deposit Bank"
      placeholder="Deposit Banks"
      dropDownItems={bankList}
-     className={`${serviceTextField} py-2`}
+     className={serviceTextField}
      nameKey="bankName"
      valueKey="bankID"
      show={showDeposit}
@@ -57,16 +62,20 @@ function CashDeposit() {
     
      </div>
      <div
-     className='flex-column my-2'
-     style={{
-      display:"flex",
-      justifyContent:"center",
-     }}
-     >
-     <SubmitButton label="Submit"/>
-     </div>
-    
+        style={{
+          position: "relative", 
+          bottom: "-10px",
+          left: "0",
+          right: "0",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <SubmitButton label="Submit" />
+      </div>
     </div>
+    </BackGround>
+   
   )
 }
 

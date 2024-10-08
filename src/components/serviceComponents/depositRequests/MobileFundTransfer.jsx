@@ -10,20 +10,21 @@ import ServiceTitle from "../../commonComponents/ServiceTitle";
 import SubmitButton from "../../commonComponents/SubmitButton";
 import { allBankList, depositBankList } from "../../../Data/AllBankList";
 import { walletList } from "../../../Data/walletList";
+import BackGround from "../../commonComponents/BackGround";
 
 function MFS() {
   const [document, setDocument] = useState(null);
   const [showDeposit,setShowDeposit] = useState(false);
   const [showClient,setShowClient] = useState(false);
   return (
-    <div
-      className="container-fluid d-flex flex-column mt-4 vh-100 w-100" // Bootstrap classes for centering and margin // Custom width style
+    <BackGround>
+         <div
+      className="d-flex flex-column mt-4 w-100" // Bootstrap classes for centering and margin // Custom width style
     >
-      <div className="d-flex flex-column px-5" style={{ flexGrow: 0.5 }}>
+      <div className="d-flex flex-column">
         <ServiceTitle label="MFS" />
         <label
-          className={`${formLabel} mt-2`}
-          style={{ fontFamily: "K2d-Bold" }}
+          className="serviceConsoleFormLabel"
         >
           Document
         </label>
@@ -32,7 +33,8 @@ function MFS() {
           setDocument={setDocument}
           label="Attach Deposit Document"
         />
-        <label className={`${formLabel}`} style={{ fontFamily: "K2d-Bold" }}>
+        <div className="mt-2"/>
+        <label className="serviceConsoleFormLabel">
           Amount
         </label>
         <ServiceInput
@@ -42,29 +44,31 @@ function MFS() {
           className={serviceTextField}
           style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
         />
+        <div className="mt-2"/>
         <Selector
           label="Select Deposit wallet"
           placeholder="Deposit Wallet "
           dropDownItems={walletList}
-          className={`${serviceTextField} py-2 px-2`}
+          className={`${serviceTextField} px-2`}
           nameKey="walletName"
           valueKey="walletID"
           show={showDeposit}
           setShow={setShowDeposit}
         />
+        <div className="mt-2"/>
         <Selector
           label="Select Client Wallet"
           placeholder="Client Wallet"
           dropDownItems={walletList}
-          className={`${serviceTextField} py-2 px-2`}
+          className={`${serviceTextField} px-2`}
           nameKey="walletName"
           valueKey="walletID"
           show={showClient}
           setShow={setShowClient}
         />
+        <div className="mt-2"/>
         <label
-          className={`${formLabel} mt-2`}
-          style={{ fontFamily: "K2d-Bold" }}
+          className="serviceConsoleFormLabel"
         >
           Wallet No.
         </label>
@@ -73,12 +77,15 @@ function MFS() {
           placeholder="Mobile Number"
           onChange={() => {}}
           className={serviceTextField}
-          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular"  }}
         />
       </div>
       <div
-        className="flex-column px-5 my-2"
         style={{
+          position: "relative", 
+          bottom: "0",
+          left: "0",
+          right: "0",
           display: "flex",
           justifyContent: "center",
         }}
@@ -86,6 +93,8 @@ function MFS() {
         <SubmitButton label="Submit" />
       </div>
     </div>
+    </BackGround>
+
   );
 }
 

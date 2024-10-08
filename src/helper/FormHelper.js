@@ -2,12 +2,9 @@ import cogoToast from "cogo-toast";
 import moment from "moment";
 import {TodayDate} from "./Config";
 import {ToWords} from "to-words";
-import * as xlsx from "xlsx";
-import store from "../redux/store/store";
-import {HideLoader, ShowLoader} from "../redux/state-slice/settings/settings-slice";
-import convert from "xml-js";
-import {setTradeJsonFile} from "../redux/state-slice/TradeProcessing/trade-file/tradeFileUpload-slice";
-import {ErrorAlert} from "./SaveAlert";
+// import * as xlsx from "xlsx";
+// import convert from "xml-js";
+
 
 let OnlyAlphabet = /^[a-zA-Z ]*$/;
 let EmailRegx = /\S+@\S+\.\S+/;

@@ -1,7 +1,7 @@
 import moment from "moment";
 import axios from "axios";
-import {BaseURL} from "../config/config";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+// import {BaseURL} from "../config/config";
+
 import utilityStore from "../store/utilityStore";
 
 export async function GetServiceListRequest() {
@@ -70,7 +70,7 @@ export async function GetServiceListRequest() {
                   "MakeDate": "2024-09-11T16:21:28.28",
                   "CurrStatus": "Pending",
                   "ChequeReceiver": "self",
-                  "ChequeReceiverName": ""
+                  "ChequeReceiverName": "Provat"
                 },
                 {
                   "Request_type": "Withdrawal",
@@ -142,7 +142,7 @@ export async function GetServiceListRequest() {
                   "MakeDate": "2024-09-12T10:32:52.64",
                   "CurrStatus": "Pending",
                   "ChequeReceiver": "self",
-                  "ChequeReceiverName": ""
+                  "ChequeReceiverName": "Provat"
                 },
                 {
                   "Request_type": "Withdrawal",
@@ -151,7 +151,7 @@ export async function GetServiceListRequest() {
                   "MakeDate": "2024-09-12T10:33:31.963",
                   "CurrStatus": "Pending",
                   "ChequeReceiver": "self",
-                  "ChequeReceiverName": ""
+                  "ChequeReceiverName": "hahaha"
                 }
               ],
               "DepositList": [],
@@ -162,7 +162,7 @@ export async function GetServiceListRequest() {
                   "ServiceCharge": 0,
                   "TotalApplicationAmount": 1000,
                   "ApplicationDate": "2024-09-11T16:21:42.207",
-                  "Status": "Pending",
+                  "Status": "Approved",
                   "InstrumentName": "Beximco 1st ZCB TR 5"
                 },
                 {

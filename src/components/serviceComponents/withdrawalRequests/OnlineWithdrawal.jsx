@@ -11,64 +11,69 @@ import withdrawalStore from "../../../store/withdrawalStore";
 import ClientFinancialInfo from "./ClientFinancialInfo";
 
 const OnlineWithdrawal = () => {
- 
   return (
     <>
-      <div className="container mx-auto mt-5">
-        <ClientFinancialInfo />
+      <div
+        style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}
+      >
+        <div
+          className="container d-flex flex-column mx-auto mt-5"
+          style={{ minHeight: "100vh" }}
+        >
+          <ClientFinancialInfo />
 
-        <ServiceTitle label="BFTN" />
+          <ServiceTitle label="BFTN" />
 
-        <div>
-          <label className="serviceConsoleFormLabel">
-            Client Bank Account Number
-          </label>
-          <ServiceInput
-            value=""
-            onChange={() => {}}
-            className={serviceTextField}
-            style={{ borderColor: "#526D82" }}
-          />
+          <div>
+            <label className="serviceConsoleFormLabel">
+              Client Bank Account Number
+            </label>
+            <ServiceInput
+              value=""
+              onChange={() => {}}
+              className={serviceTextField}
+              style={{ borderColor: "#526D82" }}
+            />
+          </div>
+
+          <div>
+            <label className="serviceConsoleFormLabel">Client Bank Name</label>
+            <ServiceInput
+              value=""
+              onChange={() => {}}
+              className={serviceTextField}
+              style={{ borderColor: "#526D82" }}
+            />
+          </div>
+
+          <div>
+            <label className="serviceConsoleFormLabel">
+              Client Bank Branch
+            </label>
+            <ServiceInput
+              value=""
+              onChange={() => {}}
+              className={serviceTextField}
+              style={{ borderColor: "#526D82" }}
+            />
+          </div>
+
+          <div>
+            <label className="serviceConsoleFormLabel">
+              Client Bank Routing Number
+            </label>
+            <ServiceInput
+              value=""
+              onChange={() => {}}
+              className={serviceTextField}
+              style={{ borderColor: "#526D82" }}
+            />
+          </div>
+
+          <div className="mt-auto" style={{ marginBottom: "60px" }}>
+            <SubmitButton label="Submit" />
+          </div>
         </div>
-
-        <div>
-          <label className="serviceConsoleFormLabel">
-          Client Bank Name
-          </label>
-          <ServiceInput
-            value=""
-            onChange={() => {}}
-            className={serviceTextField}
-            style={{ borderColor: "#526D82" }}
-          />
-        </div>
-
-        <div>
-          <label className="serviceConsoleFormLabel">
-          Client Bank Branch
-          </label>
-          <ServiceInput
-            value=""
-            onChange={() => {}}
-            className={serviceTextField}
-            style={{ borderColor: "#526D82" }}
-          />
-        </div>
-
-
-        <div>
-          <label className="serviceConsoleFormLabel">
-          Client Bank Routing Number
-          </label>
-          <ServiceInput
-            value=""
-            onChange={() => {}}
-            className={serviceTextField}
-            style={{ borderColor: "#526D82" }}
-          />
-        </div>
-
-        <SubmitButton label="Submit" />
       </div>
     </>
   );

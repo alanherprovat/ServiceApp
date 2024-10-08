@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { dropDown, formLabel } from "../../assets/styles/CommonStyles";
 import { Modal } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import "../../assets/css/modal.css";
+import "../../assets/css/serviceConsoleDashboardStyle.css";
 function Selector({
   label,
   dropDownItems = [],
-  
   className,
   placeholder,
   valueKey,
@@ -13,73 +14,70 @@ function Selector({
   show,
   setShow,
 }) {
-  console.log(label, dropDownItems, valueKey, nameKey);
   const handleClose = () => setShow(false);
-  const [selectedValue,setSelectedValue] = useState("");
-  const handleSelectitem = (value) =>{
+  const [selectedValue, setSelectedValue] = useState("");
+  
+  const handleSelectItem = (value) => {
     setSelectedValue(value);
-    setShow(!show)
-  }
+    setShow(!show);
+  };
+
   return (
     <>
-      <label className={`${formLabel} mt-2`} style={{ fontFamily: "K2d-Bold" }}>
+      <label className="serviceConsoleFormLabel">
         {label}
       </label>
-      {/* <select
-        name={selectedValue}
-        className={`${className} border-1`}
-        style={{
-          fontFamily: "k2d-regular",
-          borderColor: "#526D82",
-          overflow:"hidden"
-          // width: "100%",
-        }}
-      ><option value="" disabled selected>
-       {placeholder}
-    </option>
-        {dropDownItems?.map((item, index) => {
-          const bankID = item[valueKey];
-          const bankName = item[nameKey];
-          return (
-            <option
-              key={index}
-              value={bankID}
-              className={dropDown}
-              style={{ fontFamily: "k2d-regular" }}
-            >
-              {bankName}
-            </option>
-          );
-        })}
-      </select> */}
+
       <button
         onClick={() => setShow(!show)}
-        className={`${className} border-1 d-flex`}
+        className={`${className} d-flex py-2 my-2`}
         style={{
           fontFamily: "k2d-regular",
           borderColor: "#526D82",
           overflow: "hidden",
-          // width: "100%",
+          backgroundColor: "#fff",
+          fontSize: 8,
         }}
       >
-        {selectedValue?selectedValue:placeholder}
+        <text
+          className="ms-1"
+          style={{
+            color: selectedValue ? "#000" : "#8D8F97",
+            fontSize: 16,
+          }}
+        >
+          {selectedValue ? selectedValue : placeholder}
+        </text>
       </button>
+
       {show && (
-        <Modal show={show} onHide={handleClose} centered>
-          {dropDownItems?.map((item, index) => {
-            return (
-              <div className={`${className} justify-content-center`}>
-                <text
-                  key={index}
-                  value={item[valueKey]}
-                  style={{ fontFamily: "k2d-regular" }}
-                  onClick={()=>handleSelectitem(item[nameKey])}
-                >
-                  {item[nameKey]}
-                </text>
-              </div>
-            );
-          })}
+        <Modal
+          show={show}
+          onHide={handleClose}
+          centered // Vertically centers the modal
+          dialogClassName="no-border-radius" // Custom class for modal
+          contentClassName="modal-content-centered" // Custom class for modal content
+        >
+          <Modal.Body
+            style={{
+              maxHeight: "400px",
+              overflowY: "auto",
+            }}
+          >
+            {dropDownItems?.map((item, index) => {
+              return (
+                <div key={index} className={`${className} justify-content-center px-2`}>
+                  <text
+                    value={item[valueKey]}
+                    style={{ fontFamily: "k2d-regular", color: "#655C5C", cursor: "pointer" }}
+                    onClick={() => handleSelectItem(item[nameKey])}
+                  >
+                    {item[nameKey]}
+                  </text>
+                </div>
+              );
+            })}
+          </Modal.Body>
         </Modal>
       )}
     </>
