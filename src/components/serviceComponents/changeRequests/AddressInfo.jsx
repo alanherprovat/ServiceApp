@@ -4,22 +4,24 @@ import DocumentPicker from "../../commonComponents/DocumentPicker";
 import ServiceInput from "../../commonComponents/serviceInput";
 import { useState } from "react";
 import SubmitButton from "../../commonComponents/SubmitButton";
+import { serviceTextField } from "../../../assets/styles/CommonStyles";
 
 function AddressInfo() {
   const [document, setDocument] = useState(null);
   const [edit, setEdit] = useState(false);
   return (
-    <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}>
+    <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%",overflowY:"auto"}}>
       <div
         className="container d-flex flex-column mx-auto pt-5"
         style={{ minHeight: "100vh" }}
       >
         <label className="serviceConsoleFormLabel mb-2">Present Address</label>
         <ServiceInput
-          value=""
+          value="Badda, Dhaka"
           rightIcon="pencil-square"
           rightIconPress={() => setEdit(!edit)}
-          style={{ borderColor: "#526D82" }}
+          // className={`${serviceTextField} rounded-0`}
+          style={{ fontFamily:"k2d-regular",borderColor: "#526D82",borderWidth:1 }}
         />
 
         {edit && (
@@ -28,15 +30,15 @@ function AddressInfo() {
               Enter New Present Address
             </label>
             <ServiceInput
-              value=""
+              value="Badda,Dhaka"
               onChange={() => {}}
-              style={{ borderColor: "#526D82" }}
+              style={{ fontFamily:"k2d-regular",borderColor: "#526D82" }}
             />
           </>
         )}
 
-        <label className="serviceConsoleFormLabel my-2">Present Address</label>
-        <ServiceInput value="" style={{ borderColor: "#526D82" }} readOnly />
+        <label className="serviceConsoleFormLabel my-2">Permanent Address</label>
+        <ServiceInput value="Badda,Dhaka" style={{ fontFamily:"k2d-regular",borderColor: "#526D82" }} readOnly />
 
         <label className="serviceConsoleFormLabel mt-2">Utility File</label>
         <DocumentPicker
@@ -45,7 +47,7 @@ function AddressInfo() {
           label="Attach Utility File"
         />
 
-        <div className="mt-auto" style={{ marginBottom: "60px" }}>
+        <div className="mt-auto" style={{ marginBottom: "90px" }}>
           <SubmitButton label="Submit" />
         </div>
       </div>

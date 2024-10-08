@@ -18,10 +18,10 @@ function BankInfo() {
   const [editRoutingNo, setEditRoutingNo] = useState(false);
   const [editAccountNo, setEditAccountNo] = useState(false);
   return (
-    <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}>
+    <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" ,overflowY:"auto"}}>
       <div
         className="container d-flex flex-column mx-auto pt-5"
-        style={{ minHeight: "100vh" }}
+        style={{ minHeight: "100vh"}}
       >
         <div className="d-flex justify-content-between align-items-center mb-2">
           <label className="serviceConsoleFormLabel">Bank Name</label>
@@ -33,9 +33,9 @@ function BankInfo() {
         </div>
 
         <ServiceInput
-          value=""
+          value="Brac Bank"
           onChange={() => {}}
-          style={{ borderColor: "#526D82" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
         />
 
         {editBank && (
@@ -63,9 +63,9 @@ function BankInfo() {
         </div>
 
         <ServiceInput
-          value=""
+          value="Motijheel"
           onChange={() => {}}
-          style={{ borderColor: "#526D82" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
         />
 
         {editBranch && (
@@ -95,9 +95,9 @@ function BankInfo() {
         </div>
 
         <ServiceInput
-          value=""
+          value="123456789"
           onChange={() => {}}
-          style={{ borderColor: "#526D82" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }}
         />
 
         {editRoutingNo && (
@@ -118,7 +118,7 @@ function BankInfo() {
           value="09857948561"
           rightIcon="pencil-square"
           rightIconPress={() => setEditAccountNo(!editAccountNo)}
-          style={{ borderColor: "#526D82" }}
+          style={{ borderColor: "#526D82",fontFamily:"k2d-regular" ,borderWidth:1}}
         />
 
         {editAccountNo && (
@@ -126,11 +126,11 @@ function BankInfo() {
             <label className="serviceConsoleFormLabel my-2">
               Enter New Account No
             </label>
-            <ServiceInput style={{ borderColor: "#526D82" }} />
+            <ServiceInput style={{ borderColor: "#526D82",fontFamily:"k2d-regular" }} />
           </>
         )}
 
-        <div className="mt-auto" style={{ marginBottom: "60px" }}>
+        <div className="mt-auto" style={{ marginBottom: "90px" }}>
           <SubmitButton label="Submit" />
         </div>
       </div>

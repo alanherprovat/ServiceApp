@@ -44,6 +44,7 @@ const ServiceInput = (props) => {
           readOnly={props.readOnly}
           style={{
             backgroundColor: props.readOnly ? "#B7B5B699" : "#fff", 
+            borderRight:!rightIcon ?"1px solid #526D82":"none",
             ...style, 
           }}
         />
@@ -51,16 +52,16 @@ const ServiceInput = (props) => {
         {rightIcon && (
           <button  style={{
             outline: "none",
-            borderLeft: "1px solid #fff",
-            borderRight: "1px solid 526D82",
+            borderLeft: "none",
+            borderRight: "1px solid #526D82",
             borderTop: "1px solid #526D82",
             borderBottom: "1px solid #526D82",
-            borderTopRightRadius: 8,
-            borderBottomRightRadius: 8,
+            borderTopRightRadius: 6,
+            borderBottomRightRadius: 6,
             background: "#fff",
-            padding: "10px",
+            paddingRight: "6px",
             cursor: "pointer"
-          }} variant="outline-secondary" onClick={rightIconPress}>
+          }}  onClick={rightIconPress}>
             <i className={`bi bi-${rightIcon}`}></i>
           </button>
         )}

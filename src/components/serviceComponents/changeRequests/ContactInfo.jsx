@@ -9,7 +9,7 @@ const ContactInfo = () => {
 
   return (
     <div
-    style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}
+    style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%",overflowY:"auto" }}
     >
        <div
       className="container d-flex flex-column mx-auto pt-5"
@@ -65,7 +65,7 @@ const ContactInfo = () => {
         </>
       )}
 
-      <div className="mt-auto" style={{marginBottom: "60px"}}>
+      <div className="mt-auto" style={{marginBottom: "90px"}}>
         <SubmitButton label="Submit" />
       </div>
     </div>

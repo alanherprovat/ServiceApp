@@ -1,0 +1,17 @@
+.submit-button {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #fff;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff0000; /* Red background on hover */
+    box-shadow: 0px 0px 15px #ABC2D4;
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:active {
+    background-color: #d40000; /* Darker red background on button press */
+    box-shadow: 0px 0px 8px #ABC2D4;
+    transform: translateY(0);
+  }
+  

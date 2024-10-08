@@ -9,14 +9,14 @@ const TinInfo = () => {
   const [edit, setEdit] = useState(false);
 
   return (
-    <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%" }}>
+    <div style={{ backgroundColor: "#F6F8FA", height: "100%", width: "100%",overflowY:"auto" }}>
     <div className="container d-flex flex-column mx-auto pt-5" style={{ minHeight: '100vh' }}>
       <label className="serviceConsoleFormLabel mb-2">TIN Number</label>
       <ServiceInput
         value="09857948561"
         rightIcon="pencil-square"
         rightIconPress={() => setEdit(!edit)}
-        style={{ borderColor: "#526D82" }}
+        style={{ borderColor: "#526D82",fontFamily:"k2d-regular",borderWidth:1 }}
       />
 
       {edit && (
@@ -35,7 +35,7 @@ const TinInfo = () => {
         label="Attach TIN Certificate"
       />
 
-      <div className="mt-auto" style={{marginBottom: "60px"}}>
+      <div className="mt-auto" style={{marginBottom: "90px"}}>
         <SubmitButton label="Submit" />
       </div>
     </div>

@@ -28,7 +28,7 @@ function CashDeposit() {
    <BackGround>
      <div
     className="d-flex flex-column justify-content-between w-100 mx-auto mt-4" // Bootstrap classes for centering and margin // Custom width style
-    // style={{ overflowY: "auto" }}
+    style={{ minHeight:"100vh",overflowY:"auto"}}
   >
    
     
@@ -62,13 +62,9 @@ function CashDeposit() {
     
      </div>
      <div
+     className='mt-auto'
         style={{
-          position: "relative", 
-          bottom: "-10px",
-          left: "0",
-          right: "0",
-          display: "flex",
-          justifyContent: "center",
+         paddingBottom:"10px"
         }}
       >
         <SubmitButton label="Submit" />

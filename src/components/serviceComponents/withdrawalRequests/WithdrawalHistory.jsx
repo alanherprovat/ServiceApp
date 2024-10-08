@@ -38,7 +38,7 @@ const WithdrawalHistory = () => {
     useEffect(() => {
       (async () => {
         let result = await GetServiceListRequest();
-        console.log(result)
+        // console.log("result",result)
         setServiceRequestsList(result);
       })();
      

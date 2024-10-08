@@ -10,7 +10,7 @@ function BackGround({children}) {
         minHeight:"100vh",
         minWidth:"100%",
         overflowY:"auto",
-        paddingBottom:"50px"
+        paddingBottom:"80px"
     }}
     >{children}
     </div>
