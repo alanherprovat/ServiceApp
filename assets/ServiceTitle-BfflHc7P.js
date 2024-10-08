@@ -1,1 +1,0 @@
-import{j as e}from"./index-CZGoq2Fz.js";function n({label:t}){return e.jsx("div",{className:"d-flex justify-content-center rounded-2 mx-2 my-4 custom-rounded",style:{borderBottom:"1px solid #526D82BF"},children:e.jsx("text",{style:{fontFamily:"k2d-bold",fontSize:20,textAlign:"center"},children:t})})}export{n as S};
